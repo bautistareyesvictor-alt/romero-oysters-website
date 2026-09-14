@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fotografías reales del ostión y la zona de producción de Romero Oysters.">
+<meta name="theme-color" content="#10233d">
+<link rel="canonical" href="https://www.romerooyster.com/galeria/">
+<link rel="icon" href="/assets/logo-transparent.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Romero Oysters">
+<meta property="og:title" content="Galería | Romero Oysters">
+<meta property="og:description" content="Conoce el producto y el entorno de producción de Romero Oysters.">
+<meta property="og:url" content="https://www.romerooyster.com/galeria/">
+<meta property="og:image" content="https://www.romerooyster.com/assets/og-romero-oysters.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Galería | Romero Oysters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Work Sans', sans-serif; color: #1c2733; background: #faf7f1; }
+    a { color: #9c7c3d; text-decoration: none; }
+    a:hover { color: #7c6230; }
+    img { display: block; max-width: 100%; }
+    @media (min-width: 980px) {
+      [data-desktop-nav] { display: flex !important; }
+      [data-desktop-cta] { display: inline-block !important; }
+      [data-hamburger] { display: none !important; }
+    }
+    @media (max-width: 700px) {
+      [data-gallery-grid] { grid-template-columns: repeat(2,1fr) !important; }
+    }
+  </style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#faf7f1;">
+
+  <header style="position:sticky;top:0;z-index:50;background:#10233d;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:16px;">
+    <a href="/" style="display:flex;align-items:center;gap:10px;">
+      <img src="/assets/logo-transparent.png" alt="Romero Oysters" style="height:46px;width:auto;filter:brightness(0) invert(1);opacity:0.92;" />
+    </a>
+    <nav style="display:none;gap:26px;align-items:center;" data-desktop-nav="1">
+      <a href="/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.home }}</a>
+      <a href="/nosotros/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.about }}</a>
+      <a href="/producto/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.product }}</a>
+      <a href="/calidad/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.quality }}</a>
+      <a href="/produccion/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.production }}</a>
+      <a href="/galeria/" style="color:#c9a869;font-size:13px;letter-spacing:0.06em;font-weight:600;">{{ t.nav.gallery }}</a>
+      <a href="/comercializacion/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.commercial }}</a>
+      <a href="/contacto/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.contact }}</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button onClick="{{ setLangEs }}" style="{{ langEsBtnStyle }}">ES</button>
+        <span style="color:rgba(255,255,255,0.4);font-size:12px;">|</span>
+        <button onClick="{{ setLangEn }}" style="{{ langEnBtnStyle }}">EN</button>
+      </div>
+      <a href="/comercializacion/" style="display:none;background:#9c7c3d;color:#10233d;font-weight:600;font-size:12px;letter-spacing:0.05em;padding:11px 18px;white-space:nowrap;" data-desktop-cta="1">{{ t.nav.cta }}</a>
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="background:none;border:none;color:#f3ede1;font-size:26px;cursor:pointer;line-height:1;padding:4px;display:flex;" data-hamburger="1">☰</button>
+    </div>
+  </header>
+
+  <sc-if value="{{ menuOpen }}">
+    <div style="position:fixed;inset:0;background:#10233d;z-index:100;display:flex;flex-direction:column;padding:28px 28px;overflow-y:auto;">
+      <div style="display:flex;justify-content:flex-end;"><button onClick="{{ closeMenu }}" style="background:none;border:none;color:#f3ede1;font-size:30px;cursor:pointer;">×</button></div>
+      <nav style="display:flex;flex-direction:column;gap:22px;margin-top:24px;">
+        <a href="/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.home }}</a>
+        <a href="/nosotros/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.about }}</a>
+        <a href="/producto/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.product }}</a>
+        <a href="/calidad/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.quality }}</a>
+        <a href="/produccion/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.production }}</a>
+        <a href="/galeria/" style="color:#c9a869;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.gallery }}</a>
+        <a href="/comercializacion/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.commercial }}</a>
+        <a href="/contacto/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.contact }}</a>
+        <a href="/comercializacion/" style="margin-top:10px;background:#9c7c3d;color:#10233d;font-weight:600;font-size:14px;letter-spacing:0.05em;padding:14px 18px;text-align:center;">{{ t.nav.cta }}</a>
+      </nav>
+    </div>
+  </sc-if>
+
+  <section style="padding:80px 32px 20px;text-align:center;">
+    <div style="color:#9c7c3d;font-size:12px;letter-spacing:0.16em;font-weight:600;margin-bottom:14px;">{{ t.nav.gallery }}</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,48px);font-weight:600;color:#10233d;margin:0 0 12px;">{{ t.pageTitle }}</h1>
+    <p style="font-size:15px;color:#5c5142;margin:0;">{{ t.subtitle }}</p>
+  </section>
+
+  <section style="padding:40px 32px 100px;max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;" data-gallery-grid="1">
+      <sc-for list="{{ gallery }}" as="img" hint-placeholder-count="7">
+        <div onClick="{{ img.onOpen }}" style="cursor:pointer;overflow:hidden;aspect-ratio:4/5;position:relative;">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-dc-src="{{ img.src }}" alt="{{ img.caption }}" style="width:100%;height:100%;object-fit:cover;" />
+          <div style="position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(11,26,46,0.75));color:#faf7f1;font-size:12px;padding:20px 12px 10px;">{{ img.caption }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <sc-if value="{{ lightboxImg }}">
+    <div style="position:fixed;inset:0;background:rgba(11,26,46,0.94);z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;">
+      <button onClick="{{ closeLightbox }}" style="position:absolute;top:22px;right:26px;background:none;border:none;color:#faf7f1;font-size:32px;cursor:pointer;">×</button>
+      <button onClick="{{ prevLightbox }}" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:#faf7f1;font-size:38px;cursor:pointer;">‹</button>
+      <button onClick="{{ nextLightbox }}" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:#faf7f1;font-size:38px;cursor:pointer;">›</button>
+      <div style="max-width:900px;max-height:82vh;display:flex;flex-direction:column;align-items:center;gap:16px;">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-dc-src="{{ lightboxImg.src }}" alt="{{ lightboxImg.caption }}" style="max-width:100%;max-height:72vh;object-fit:contain;" />
+        <div style="color:#e7e0d3;font-size:14px;letter-spacing:0.04em;">{{ lightboxImg.caption }}</div>
+      </div>
+    </div>
+  </sc-if>
+
+  <footer style="background:#0b1a2e;padding:64px 32px 32px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(250,247,241,0.12);">
+      <div>
+        <img src="/assets/logo-transparent.png" alt="Romero Oysters" style="height:44px;filter:brightness(0) invert(1);opacity:0.9;margin-bottom:16px;" />
+        <div style="color:#8b95a5;font-size:14px;margin-bottom:10px;">Poza Grande, Baja California Sur, México.</div>
+        <div style="color:#c9a869;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;">{{ t.footerTagline }}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="/" style="color:#c3cad6;font-size:14px;">{{ t.nav.home }}</a>
+        <a href="/nosotros/" style="color:#c3cad6;font-size:14px;">{{ t.nav.about }}</a>
+        <a href="/producto/" style="color:#c3cad6;font-size:14px;">{{ t.nav.product }}</a>
+        <a href="/calidad/" style="color:#c3cad6;font-size:14px;">{{ t.nav.quality }}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="/galeria/" style="color:#c3cad6;font-size:14px;">{{ t.nav.gallery }}</a>
+        <a href="/comercializacion/" style="color:#c3cad6;font-size:14px;">{{ t.nav.commercial }}</a>
+        <a href="/contacto/" style="color:#c3cad6;font-size:14px;">{{ t.nav.contact }}</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:20px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="color:#6b7688;font-size:12px;">{{ t.footerRights }}</div>
+      <div style="color:#6b7688;font-size:12px;">{{ t.privacy }}</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/526121697388" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:24px;right:24px;background:#1c2733;color:#faf7f1;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:60;box-shadow:0 6px 18px rgba(0,0,0,0.3);">✆</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: (() => { try { return localStorage.getItem('romero_lang') || 'es'; } catch (e) { return 'es'; } })(), menuOpen: false, lightboxIndex: null };
+
+  images = [
+    { src: '/assets/photo-closed-oyster.jpg', capEs: 'Ostión cerrado', capEn: 'Closed oyster' },
+    { src: '/assets/photo-open-oyster-1.jpg', capEs: 'Ostión abierto', capEn: 'Open oyster' },
+    { src: '/assets/photo-open-oyster-2.jpg', capEs: 'Textura y frescura', capEn: 'Texture and freshness' },
+    { src: '/assets/photo-open-oyster-redshirt.jpg', capEs: 'Detalle de producto', capEn: 'Product detail' },
+    { src: '/assets/photo-oysters-gloves-2.jpg', capEs: 'Producto recién cosechado', capEn: 'Freshly harvested product' },
+    { src: '/assets/photo-hero-hand-oysters.jpg', capEs: 'Cosecha en Poza Grande', capEn: 'Harvest at Poza Grande' },
+    { src: '/assets/photo-hero-dock.jpg', capEs: 'Entorno de producción', capEn: 'Production environment' }
+  ];
+
+  content = {
+    es: {
+      nav: { home:'INICIO', about:'NOSOTROS', product:'NUESTRO OSTIÓN', quality:'CALIDAD Y CERTIFICACIONES', production:'PRODUCCIÓN', gallery:'GALERÍA', commercial:'COMERCIALIZACIÓN', contact:'CONTACTO', cta:'SOLICITAR COTIZACIÓN' },
+      pageTitle: 'CONOCE NUESTRO PRODUCTO', subtitle: 'Fotografías reales de nuestro producto y zona de producción.',
+      footerTagline:'Calidad que viene del mar. Confianza que llega a tu mesa.', footerRights:'© Romero Oysters', privacy:'Aviso de privacidad'
+    },
+    en: {
+      nav: { home:'HOME', about:'ABOUT US', product:'OUR OYSTER', quality:'QUALITY & CERTIFICATIONS', production:'PRODUCTION', gallery:'GALLERY', commercial:'COMMERCIAL', contact:'CONTACT', cta:'REQUEST A QUOTE' },
+      pageTitle: 'GET TO KNOW OUR PRODUCT', subtitle: 'Real photographs of our product and production area.',
+      footerTagline:'Quality that comes from the sea. Confidence that reaches your table.', footerRights:'© Romero Oysters', privacy:'Privacy notice'
+    }
+  };
+
+  setLang = (l) => { try { localStorage.setItem('romero_lang', l); } catch (e) {} this.setState({ lang: l }); };
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+  closeMenu = () => this.setState({ menuOpen: false });
+  openLightbox = (i) => this.setState({ lightboxIndex: i });
+  closeLightbox = () => this.setState({ lightboxIndex: null });
+  nextLightbox = () => this.setState(s => ({ lightboxIndex: (s.lightboxIndex + 1) % this.images.length }));
+  prevLightbox = () => this.setState(s => ({ lightboxIndex: (s.lightboxIndex - 1 + this.images.length) % this.images.length }));
+
+  renderVals() {
+    const lang = this.state.lang;
+    const t = this.content[lang];
+    const active = { background: '#9c7c3d', color: '#10233d', border: 'none', fontSize: '12px', fontWeight: 700, padding: '3px 6px', cursor: 'pointer' };
+    const inactive = { background: 'none', color: '#c3cad6', border: 'none', fontSize: '12px', fontWeight: 500, padding: '3px 6px', cursor: 'pointer' };
+    const gallery = this.images.map((img, i) => ({ src: img.src, caption: lang === 'en' ? img.capEn : img.capEs, onOpen: () => this.openLightbox(i) }));
+    const lightboxImg = this.state.lightboxIndex !== null ? gallery[this.state.lightboxIndex] : null;
+    return {
+      t, lang, setLangEs: () => this.setLang('es'), setLangEn: () => this.setLang('en'),
+      langEsBtnStyle: lang === 'es' ? active : inactive, langEnBtnStyle: lang === 'en' ? active : inactive,
+      menuOpen: this.state.menuOpen, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      gallery, lightboxImg, closeLightbox: this.closeLightbox, nextLightbox: this.nextLightbox, prevLightbox: this.prevLightbox
+    };
+  }
+}
+</script>
+</body>
+</html>
