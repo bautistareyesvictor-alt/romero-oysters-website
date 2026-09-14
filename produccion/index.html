@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Capacidad de producción y prácticas de acuacultura de Romero Oysters en Baja California Sur.">
+<meta name="theme-color" content="#10233d">
+<link rel="canonical" href="https://www.romerooyster.com/produccion/">
+<link rel="icon" href="/assets/logo-transparent.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Romero Oysters">
+<meta property="og:title" content="Producción | Romero Oysters">
+<meta property="og:description" content="Producción de ostión japonés desde Poza Grande, Baja California Sur.">
+<meta property="og:url" content="https://www.romerooyster.com/produccion/">
+<meta property="og:image" content="https://www.romerooyster.com/assets/og-romero-oysters.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Producción | Romero Oysters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Work Sans', sans-serif; color: #1c2733; background: #faf7f1; }
+    a { color: #9c7c3d; text-decoration: none; }
+    a:hover { color: #7c6230; }
+    img { display: block; max-width: 100%; }
+    @media (min-width: 980px) {
+      [data-desktop-nav] { display: flex !important; }
+      [data-desktop-cta] { display: inline-block !important; }
+      [data-hamburger] { display: none !important; }
+    }
+  </style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#faf7f1;">
+
+  <header style="position:sticky;top:0;z-index:50;background:#10233d;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:16px;">
+    <a href="/" style="display:flex;align-items:center;gap:10px;">
+      <img src="/assets/logo-transparent.png" alt="Romero Oysters" style="height:46px;width:auto;filter:brightness(0) invert(1);opacity:0.92;" />
+    </a>
+    <nav style="display:none;gap:26px;align-items:center;" data-desktop-nav="1">
+      <a href="/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.home }}</a>
+      <a href="/nosotros/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.about }}</a>
+      <a href="/producto/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.product }}</a>
+      <a href="/calidad/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.quality }}</a>
+      <a href="/produccion/" style="color:#c9a869;font-size:13px;letter-spacing:0.06em;font-weight:600;">{{ t.nav.production }}</a>
+      <a href="/galeria/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.gallery }}</a>
+      <a href="/comercializacion/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.commercial }}</a>
+      <a href="/contacto/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.contact }}</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button onClick="{{ setLangEs }}" style="{{ langEsBtnStyle }}">ES</button>
+        <span style="color:rgba(255,255,255,0.4);font-size:12px;">|</span>
+        <button onClick="{{ setLangEn }}" style="{{ langEnBtnStyle }}">EN</button>
+      </div>
+      <a href="/comercializacion/" style="display:none;background:#9c7c3d;color:#10233d;font-weight:600;font-size:12px;letter-spacing:0.05em;padding:11px 18px;white-space:nowrap;" data-desktop-cta="1">{{ t.nav.cta }}</a>
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="background:none;border:none;color:#f3ede1;font-size:26px;cursor:pointer;line-height:1;padding:4px;display:flex;" data-hamburger="1">☰</button>
+    </div>
+  </header>
+
+  <sc-if value="{{ menuOpen }}">
+    <div style="position:fixed;inset:0;background:#10233d;z-index:100;display:flex;flex-direction:column;padding:28px 28px;overflow-y:auto;">
+      <div style="display:flex;justify-content:flex-end;"><button onClick="{{ closeMenu }}" style="background:none;border:none;color:#f3ede1;font-size:30px;cursor:pointer;">×</button></div>
+      <nav style="display:flex;flex-direction:column;gap:22px;margin-top:24px;">
+        <a href="/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.home }}</a>
+        <a href="/nosotros/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.about }}</a>
+        <a href="/producto/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.product }}</a>
+        <a href="/calidad/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.quality }}</a>
+        <a href="/produccion/" style="color:#c9a869;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.production }}</a>
+        <a href="/galeria/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.gallery }}</a>
+        <a href="/comercializacion/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.commercial }}</a>
+        <a href="/contacto/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.contact }}</a>
+        <a href="/comercializacion/" style="margin-top:10px;background:#9c7c3d;color:#10233d;font-weight:600;font-size:14px;letter-spacing:0.05em;padding:14px 18px;text-align:center;">{{ t.nav.cta }}</a>
+      </nav>
+    </div>
+  </sc-if>
+
+  <section style="position:relative;min-height:320px;display:flex;align-items:center;">
+    <img src="/assets/photo-hero-dock.jpg" alt="Zona de producción, Poza Grande" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+    <div style="position:absolute;inset:0;background:rgba(11,26,46,0.72);"></div>
+    <div style="position:relative;z-index:2;padding:70px 32px;max-width:900px;">
+      <div style="color:#c9a869;font-size:12px;letter-spacing:0.16em;font-weight:600;margin-bottom:14px;">{{ t.nav.production }}</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;color:#faf7f1;font-size:clamp(30px,5vw,50px);font-weight:600;margin:0;">{{ t.pageTitle }}</h1>
+    </div>
+  </section>
+
+  <section style="padding:88px 32px;text-align:center;">
+    <div style="max-width:760px;margin:0 auto;">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.6vw,38px);font-weight:600;color:#10233d;margin:0 0 30px;">{{ t.capacityTitle }}</h2>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(56px,10vw,110px);font-weight:700;color:#9c7c3d;line-height:1;">{{ t.capacityNumber }}</div>
+      <div style="color:#3a4452;font-size:13px;letter-spacing:0.12em;font-weight:600;margin-top:8px;margin-bottom:28px;">{{ t.capacityUnit }}</div>
+      <p style="color:#5c5142;font-size:15px;line-height:1.7;max-width:560px;margin:0 auto 34px;">{{ t.capacityNote }}</p>
+      <a href="/comercializacion/" style="display:inline-block;border:1px solid #10233d;color:#10233d;font-weight:600;font-size:13px;letter-spacing:0.05em;padding:15px 26px;">{{ t.capacityCta }}</a>
+    </div>
+  </section>
+
+  <section style="background:#f2ecdf;padding:88px 32px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;">
+      <img src="/assets/photo-oysters-gloves-2.jpg" alt="Cosecha" style="width:100%;height:400px;object-fit:cover;" />
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.4vw,34px);font-weight:600;color:#10233d;margin:0 0 18px;">{{ t.sustainTitle }}</h2>
+        <p style="font-size:16px;line-height:1.75;color:#3a4452;margin:0;">{{ t.sustainText }}</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0b1a2e;padding:64px 32px 32px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(250,247,241,0.12);">
+      <div>
+        <img src="/assets/logo-transparent.png" alt="Romero Oysters" style="height:44px;filter:brightness(0) invert(1);opacity:0.9;margin-bottom:16px;" />
+        <div style="color:#8b95a5;font-size:14px;margin-bottom:10px;">Poza Grande, Baja California Sur, México.</div>
+        <div style="color:#c9a869;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;">{{ t.footerTagline }}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="/" style="color:#c3cad6;font-size:14px;">{{ t.nav.home }}</a>
+        <a href="/nosotros/" style="color:#c3cad6;font-size:14px;">{{ t.nav.about }}</a>
+        <a href="/producto/" style="color:#c3cad6;font-size:14px;">{{ t.nav.product }}</a>
+        <a href="/calidad/" style="color:#c3cad6;font-size:14px;">{{ t.nav.quality }}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="/galeria/" style="color:#c3cad6;font-size:14px;">{{ t.nav.gallery }}</a>
+        <a href="/comercializacion/" style="color:#c3cad6;font-size:14px;">{{ t.nav.commercial }}</a>
+        <a href="/contacto/" style="color:#c3cad6;font-size:14px;">{{ t.nav.contact }}</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:20px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="color:#6b7688;font-size:12px;">{{ t.footerRights }}</div>
+      <div style="color:#6b7688;font-size:12px;">{{ t.privacy }}</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/526121697388" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:24px;right:24px;background:#1c2733;color:#faf7f1;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:60;box-shadow:0 6px 18px rgba(0,0,0,0.3);">✆</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: (() => { try { return localStorage.getItem('romero_lang') || 'es'; } catch (e) { return 'es'; } })(), menuOpen: false };
+
+  content = {
+    es: {
+      nav: { home:'INICIO', about:'NOSOTROS', product:'NUESTRO OSTIÓN', quality:'CALIDAD Y CERTIFICACIONES', production:'PRODUCCIÓN', gallery:'GALERÍA', commercial:'COMERCIALIZACIÓN', contact:'CONTACTO', cta:'SOLICITAR COTIZACIÓN' },
+      pageTitle: 'PRODUCCIÓN',
+      capacityTitle: 'CAPACIDAD PARA ATENDER EL MERCADO', capacityNumber: '8,000', capacityUnit: 'DOCENAS MENSUALES (HASTA)',
+      capacityNote: 'Sujeto a disponibilidad, temporada y programación de pedidos. Para operaciones de volumen recomendamos programar los pedidos con anticipación.',
+      capacityCta: 'SOLICITAR INFORMACIÓN COMERCIAL',
+      sustainTitle: 'ACUICULTURA Y MAR',
+      sustainText: 'Los ostiones son organismos filtradores. El cultivo de moluscos bivalvos puede integrarse a sistemas acuícolas con bajo requerimiento de alimento externo, en convivencia con el entorno lagunar donde se producen.',
+      footerTagline:'Calidad que viene del mar. Confianza que llega a tu mesa.', footerRights:'© Romero Oysters', privacy:'Aviso de privacidad'
+    },
+    en: {
+      nav: { home:'HOME', about:'ABOUT US', product:'OUR OYSTER', quality:'QUALITY & CERTIFICATIONS', production:'PRODUCTION', gallery:'GALLERY', commercial:'COMMERCIAL', contact:'CONTACT', cta:'REQUEST A QUOTE' },
+      pageTitle: 'PRODUCTION',
+      capacityTitle: 'CAPACITY TO SUPPLY THE MARKET', capacityNumber: '8,000', capacityUnit: 'DOZENS PER MONTH (UP TO)',
+      capacityNote: 'Subject to availability, season and order scheduling. For volume operations we recommend scheduling orders in advance.',
+      capacityCta: 'REQUEST COMMERCIAL INFORMATION',
+      sustainTitle: 'AQUACULTURE AND THE SEA',
+      sustainText: 'Oysters are filter-feeding organisms. Bivalve mollusk farming can integrate into aquaculture systems with low external feed requirements, coexisting with the lagoon environment where they are produced.',
+      footerTagline:'Quality that comes from the sea. Confidence that reaches your table.', footerRights:'© Romero Oysters', privacy:'Privacy notice'
+    }
+  };
+
+  setLang = (l) => { try { localStorage.setItem('romero_lang', l); } catch (e) {} this.setState({ lang: l }); };
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+  closeMenu = () => this.setState({ menuOpen: false });
+
+  renderVals() {
+    const lang = this.state.lang;
+    const t = this.content[lang];
+    const active = { background: '#9c7c3d', color: '#10233d', border: 'none', fontSize: '12px', fontWeight: 700, padding: '3px 6px', cursor: 'pointer' };
+    const inactive = { background: 'none', color: '#c3cad6', border: 'none', fontSize: '12px', fontWeight: 500, padding: '3px 6px', cursor: 'pointer' };
+    return {
+      t, lang, setLangEs: () => this.setLang('es'), setLangEn: () => this.setLang('en'),
+      langEsBtnStyle: lang === 'es' ? active : inactive, langEnBtnStyle: lang === 'en' ? active : inactive,
+      menuOpen: this.state.menuOpen, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu
+    };
+  }
+}
+</script>
+</body>
+</html>
