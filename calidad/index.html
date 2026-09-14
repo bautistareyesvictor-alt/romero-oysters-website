@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Información sanitaria, trazabilidad y documentación de la producción de Romero Oysters.">
+<meta name="theme-color" content="#10233d">
+<link rel="canonical" href="https://www.romerooyster.com/calidad/">
+<link rel="icon" href="/assets/logo-transparent.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Romero Oysters">
+<meta property="og:title" content="Calidad y Certificaciones | Romero Oysters">
+<meta property="og:description" content="Calidad, trazabilidad y respaldo documental desde el origen.">
+<meta property="og:url" content="https://www.romerooyster.com/calidad/">
+<meta property="og:image" content="https://www.romerooyster.com/assets/og-romero-oysters.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Calidad y Certificaciones | Romero Oysters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Work Sans', sans-serif; color: #1c2733; background: #faf7f1; }
+    a { color: #9c7c3d; text-decoration: none; }
+    a:hover { color: #7c6230; }
+    img { display: block; max-width: 100%; }
+    @media (min-width: 980px) {
+      [data-desktop-nav] { display: flex !important; }
+      [data-desktop-cta] { display: inline-block !important; }
+      [data-hamburger] { display: none !important; }
+    }
+  </style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#faf7f1;">
+
+  <header style="position:sticky;top:0;z-index:50;background:#10233d;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:16px;">
+    <a href="/" style="display:flex;align-items:center;gap:10px;">
+      <img src="/assets/logo-transparent.png" alt="Romero Oysters" style="height:46px;width:auto;filter:brightness(0) invert(1);opacity:0.92;" />
+    </a>
+    <nav style="display:none;gap:26px;align-items:center;" data-desktop-nav="1">
+      <a href="/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.home }}</a>
+      <a href="/nosotros/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.about }}</a>
+      <a href="/producto/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.product }}</a>
+      <a href="/calidad/" style="color:#c9a869;font-size:13px;letter-spacing:0.06em;font-weight:600;">{{ t.nav.quality }}</a>
+      <a href="/produccion/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.production }}</a>
+      <a href="/galeria/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.gallery }}</a>
+      <a href="/comercializacion/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.commercial }}</a>
+      <a href="/contacto/" style="color:#f3ede1;font-size:13px;letter-spacing:0.06em;font-weight:500;">{{ t.nav.contact }}</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button onClick="{{ setLangEs }}" style="{{ langEsBtnStyle }}">ES</button>
+        <span style="color:rgba(255,255,255,0.4);font-size:12px;">|</span>
+        <button onClick="{{ setLangEn }}" style="{{ langEnBtnStyle }}">EN</button>
+      </div>
+      <a href="/comercializacion/" style="display:none;background:#9c7c3d;color:#10233d;font-weight:600;font-size:12px;letter-spacing:0.05em;padding:11px 18px;white-space:nowrap;" data-desktop-cta="1">{{ t.nav.cta }}</a>
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="background:none;border:none;color:#f3ede1;font-size:26px;cursor:pointer;line-height:1;padding:4px;display:flex;" data-hamburger="1">☰</button>
+    </div>
+  </header>
+
+  <sc-if value="{{ menuOpen }}">
+    <div style="position:fixed;inset:0;background:#10233d;z-index:100;display:flex;flex-direction:column;padding:28px 28px;overflow-y:auto;">
+      <div style="display:flex;justify-content:flex-end;"><button onClick="{{ closeMenu }}" style="background:none;border:none;color:#f3ede1;font-size:30px;cursor:pointer;">×</button></div>
+      <nav style="display:flex;flex-direction:column;gap:22px;margin-top:24px;">
+        <a href="/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.home }}</a>
+        <a href="/nosotros/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.about }}</a>
+        <a href="/producto/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.product }}</a>
+        <a href="/calidad/" style="color:#c9a869;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.quality }}</a>
+        <a href="/produccion/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.production }}</a>
+        <a href="/galeria/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.gallery }}</a>
+        <a href="/comercializacion/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.commercial }}</a>
+        <a href="/contacto/" style="color:#f3ede1;font-size:20px;font-family:'Cormorant Garamond',serif;">{{ t.nav.contact }}</a>
+        <a href="/comercializacion/" style="margin-top:10px;background:#9c7c3d;color:#10233d;font-weight:600;font-size:14px;letter-spacing:0.05em;padding:14px 18px;text-align:center;">{{ t.nav.cta }}</a>
+      </nav>
+    </div>
+  </sc-if>
+
+  <section style="position:relative;min-height:320px;display:flex;align-items:center;">
+    <img src="/assets/photo-open-oyster-1.jpg" alt="Documentación sanitaria" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+    <div style="position:absolute;inset:0;background:rgba(11,26,46,0.78);"></div>
+    <div style="position:relative;z-index:2;padding:70px 32px;max-width:900px;">
+      <div style="color:#c9a869;font-size:12px;letter-spacing:0.16em;font-weight:600;margin-bottom:14px;">{{ t.nav.quality }}</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;color:#faf7f1;font-size:clamp(28px,4.6vw,46px);font-weight:600;margin:0;">{{ t.pageTitle }}</h1>
+    </div>
+  </section>
+
+  <section style="padding:88px 32px;max-width:1000px;margin:0 auto;">
+    <p style="font-size:17px;line-height:1.8;color:#3a4452;margin:0 0 56px;text-align:center;">{{ t.intro }}</p>
+
+    <div style="background:#f2ecdf;padding:44px;margin-bottom:20px;">
+      <div style="font-size:12px;letter-spacing:0.14em;color:#9c7c3d;font-weight:700;margin-bottom:22px;">{{ t.certHeading }}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px 32px;">
+        <div><div style="{{ ls }}">{{ t.certLabel1 }}</div><div style="{{ vs }}">{{ t.certValue1 }}</div></div>
+        <div><div style="{{ ls }}">{{ t.certLabel5 }}</div><div style="{{ vs }}color:#9c7c3d;font-weight:700;">{{ t.certValue5 }}</div></div>
+        <div><div style="{{ ls }}">{{ t.certLabel2 }}</div><div style="{{ vs }}">{{ t.certValue2 }}</div></div>
+        <div><div style="{{ ls }}">{{ t.certLabel3 }}</div><div style="{{ vs }}">{{ t.certValue3 }}</div></div>
+        <div style="grid-column:1/-1;"><div style="{{ ls }}">{{ t.certLabel4 }}</div><div style="{{ vs }}">{{ t.certValue4 }}</div></div>
+        <div style="grid-column:1/-1;"><div style="{{ ls }}">{{ t.certLabel7 }}</div><div style="{{ vs }}font-style:italic;">{{ t.certValue7 }}</div></div>
+        <div><div style="{{ ls }}">{{ t.certLabel6 }}</div><div style="{{ vs }}">{{ t.certValue6 }}</div></div>
+      </div>
+    </div>
+
+    <div style="background:#f2ecdf;padding:44px;margin-bottom:36px;">
+      <div style="font-size:12px;letter-spacing:0.14em;color:#9c7c3d;font-weight:700;margin-bottom:22px;">{{ t.permitHeading }}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px 32px;">
+        <div><div style="{{ ls }}">{{ t.permitLabel1 }}</div><div style="{{ vs }}">{{ t.permitValue1 }}</div></div>
+        <div><div style="{{ ls }}">{{ t.permitLabel2 }}</div><div style="{{ vs }}">{{ t.permitValue2 }}</div></div>
+      </div>
+      <p style="font-size:13px;line-height:1.6;color:#7a7160;margin:24px 0 0;font-style:italic;">{{ t.permitNote }}</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:20px;">
+      <sc-for list="{{ t.checklist }}" as="item" hint-placeholder-count="5">
+        <div style="display:flex;align-items:flex-start;gap:12px;padding:16px 0;border-bottom:1px solid #e6ddcd;">
+          <span style="color:#9c7c3d;font-size:18px;line-height:1;">✓</span>
+          <span style="font-size:15px;color:#1c2733;line-height:1.5;">{{ item }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <p style="font-size:13px;color:#7a7160;text-align:center;">{{ t.docsNote }}</p>
+  </section>
+
+  <section style="background:#10233d;padding:88px 32px;">
+    <div style="max-width:1000px;margin:0 auto;">
+      <div style="text-align:center;max-width:680px;margin:0 auto 50px;">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.6vw,36px);font-weight:600;color:#faf7f1;margin:0 0 16px;">{{ t.traceTitle }}</h2>
+        <p style="font-size:15px;line-height:1.7;color:#b7bfcb;margin:0;">{{ t.traceText }}</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;align-items:center;">
+        <sc-for list="{{ traceSteps }}" as="step" hint-placeholder-count="6">
+          <div style="display:flex;align-items:center;">
+            <div style="background:rgba(250,247,241,0.06);border:1px solid rgba(250,247,241,0.25);padding:16px 20px;font-size:12px;letter-spacing:0.08em;font-weight:600;color:#faf7f1;text-align:center;min-width:130px;">{{ step.label }}</div>
+            <sc-if value="{{ step.hasNext }}"><span style="color:#c9a869;font-size:18px;padding:0 10px;">→</span></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0b1a2e;padding:64px 32px 32px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(250,247,241,0.12);">
+      <div>
+        <img src="/assets/logo-transparent.png" alt="Romero Oysters" style="height:44px;filter:brightness(0) invert(1);opacity:0.9;margin-bottom:16px;" />
+        <div style="color:#8b95a5;font-size:14px;margin-bottom:10px;">Poza Grande, Baja California Sur, México.</div>
+        <div style="color:#c9a869;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;">{{ t.footerTagline }}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="/" style="color:#c3cad6;font-size:14px;">{{ t.nav.home }}</a>
+        <a href="/nosotros/" style="color:#c3cad6;font-size:14px;">{{ t.nav.about }}</a>
+        <a href="/producto/" style="color:#c3cad6;font-size:14px;">{{ t.nav.product }}</a>
+        <a href="/calidad/" style="color:#c3cad6;font-size:14px;">{{ t.nav.quality }}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="/galeria/" style="color:#c3cad6;font-size:14px;">{{ t.nav.gallery }}</a>
+        <a href="/comercializacion/" style="color:#c3cad6;font-size:14px;">{{ t.nav.commercial }}</a>
+        <a href="/contacto/" style="color:#c3cad6;font-size:14px;">{{ t.nav.contact }}</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:20px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="color:#6b7688;font-size:12px;">{{ t.footerRights }}</div>
+      <div style="color:#6b7688;font-size:12px;">{{ t.privacy }}</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/526121697388" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:24px;right:24px;background:#1c2733;color:#faf7f1;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:60;box-shadow:0 6px 18px rgba(0,0,0,0.3);">✆</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: (() => { try { return localStorage.getItem('romero_lang') || 'es'; } catch (e) { return 'es'; } })(), menuOpen: false };
+
+  content = {
+    es: {
+      nav: { home:'INICIO', about:'NOSOTROS', product:'NUESTRO OSTIÓN', quality:'CALIDAD Y CERTIFICACIONES', production:'PRODUCCIÓN', gallery:'GALERÍA', commercial:'COMERCIALIZACIÓN', contact:'CONTACTO', cta:'SOLICITAR COTIZACIÓN' },
+      pageTitle: 'CALIDAD RESPALDADA DESDE EL ORIGEN',
+      intro: 'Nuestra operación cuenta con documentación sanitaria emitida por la autoridad competente para el área de producción.',
+      certHeading: 'CERTIFICADO DE CALIDAD SANITARIA DE AGUA Y PRODUCTO',
+      certLabel1:'AUTORIDAD', certValue1:'COFEPRIS / Secretaría de Salud',
+      certLabel2:'OFICIO', certValue2:'253301707X0163',
+      certLabel3:'CLAVE', certValue3:'MX 3-244 MC',
+      certLabel4:'ÁREA', certValue4:'Complejo Lagunar Bahía Magdalena – Bahía Almejas (Zona 4), Municipio de Comondú, B.C.S.',
+      certLabel5:'CLASIFICACIÓN', certValue5:'APROBADA',
+      certLabel6:'NORMA DE REFERENCIA', certValue6:'NOM-242-SSA1-2009',
+      certLabel7:'ESPECIE COMPRENDIDA', certValue7:'Ostión japonés (Crassostrea gigas)',
+      permitHeading: 'PERMISO PARA LA ACUACULTURA DE FOMENTO',
+      permitLabel1:'NÚMERO DE PERMISO', permitValue1:'PAF/DGOPA-090/2024',
+      permitLabel2:'VIGENCIA DEL PERMISO', permitValue2:'25 de noviembre de 2028',
+      permitNote:'El certificado sanitario y el permiso acuícola son documentos distintos, cada uno con su propia vigencia.',
+      checklist: ['Área clasificada como APROBADA','Certificado de Calidad Sanitaria de Agua y Producto','Identificación de origen','Producción dentro del polígono autorizado','Documentación sanitaria'],
+      docsNote: 'Los documentos completos están disponibles a solicitud para compradores interesados.',
+      traceTitle:'DEL ORIGEN AL COMPRADOR',
+      traceText:'Trabajamos para mantener identificado el origen del producto y brindar certeza a nuestros clientes desde la zona de producción hasta la operación comercial.',
+      traceSteps: ['CULTIVO','COSECHA','SELECCIÓN','CLASIFICACIÓN POR TALLA','PREPARACIÓN DEL PEDIDO','ENTREGA / LOGÍSTICA'],
+      footerTagline:'Calidad que viene del mar. Confianza que llega a tu mesa.', footerRights:'© Romero Oysters', privacy:'Aviso de privacidad'
+    },
+    en: {
+      nav: { home:'HOME', about:'ABOUT US', product:'OUR OYSTER', quality:'QUALITY & CERTIFICATIONS', production:'PRODUCTION', gallery:'GALLERY', commercial:'COMMERCIAL', contact:'CONTACT', cta:'REQUEST A QUOTE' },
+      pageTitle: 'QUALITY BACKED FROM THE SOURCE',
+      intro: 'Our operation holds sanitary documentation issued by the competent authority for the production area.',
+      certHeading: 'WATER AND PRODUCT SANITARY QUALITY CERTIFICATE',
+      certLabel1:'AUTHORITY', certValue1:'COFEPRIS / Secretaría de Salud (Mexican Health Authority)',
+      certLabel2:'OFFICIAL NOTICE NO.', certValue2:'253301707X0163',
+      certLabel3:'CODE', certValue3:'MX 3-244 MC',
+      certLabel4:'AREA', certValue4:'Bahía Magdalena – Bahía Almejas Lagoon Complex (Zone 4), Comondú Municipality, B.C.S.',
+      certLabel5:'CLASSIFICATION', certValue5:'APPROVED',
+      certLabel6:'REFERENCE STANDARD', certValue6:'NOM-242-SSA1-2009',
+      certLabel7:'SPECIES COVERED', certValue7:'Japanese oyster (Crassostrea gigas)',
+      permitHeading: 'AQUACULTURE DEVELOPMENT PERMIT',
+      permitLabel1:'PERMIT NUMBER', permitValue1:'PAF/DGOPA-090/2024',
+      permitLabel2:'PERMIT VALID THROUGH', permitValue2:'November 25, 2028',
+      permitNote:'The sanitary certificate and the aquaculture permit are separate documents, each with its own validity period.',
+      checklist: ['Area classified as APPROVED','Water and Product Sanitary Quality Certificate','Identified origin','Production within the authorized polygon','Sanitary documentation'],
+      docsNote: 'Full documents are available upon request for interested buyers.',
+      traceTitle:'FROM ORIGIN TO BUYER',
+      traceText:'We work to keep the origin of the product identified and provide certainty to our clients, from the production area to the commercial operation.',
+      traceSteps:['FARMING','HARVEST','SELECTION','SIZE GRADING','ORDER PREPARATION','DELIVERY / LOGISTICS'],
+      footerTagline:'Quality that comes from the sea. Confidence that reaches your table.', footerRights:'© Romero Oysters', privacy:'Privacy notice'
+    }
+  };
+
+  setLang = (l) => { try { localStorage.setItem('romero_lang', l); } catch (e) {} this.setState({ lang: l }); };
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+  closeMenu = () => this.setState({ menuOpen: false });
+
+  renderVals() {
+    const lang = this.state.lang;
+    const t = this.content[lang];
+    const active = { background: '#9c7c3d', color: '#10233d', border: 'none', fontSize: '12px', fontWeight: 700, padding: '3px 6px', cursor: 'pointer' };
+    const inactive = { background: 'none', color: '#c3cad6', border: 'none', fontSize: '12px', fontWeight: 500, padding: '3px 6px', cursor: 'pointer' };
+    return {
+      t, lang, setLangEs: () => this.setLang('es'), setLangEn: () => this.setLang('en'),
+      langEsBtnStyle: lang === 'es' ? active : inactive, langEnBtnStyle: lang === 'en' ? active : inactive,
+      menuOpen: this.state.menuOpen, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      traceSteps: t.traceSteps.map((s, i, arr) => ({ label: s, hasNext: i < arr.length - 1 })),
+      ls: 'font-size:11px;letter-spacing:0.1em;color:#9c7c3d;font-weight:600;margin-bottom:5px;',
+      vs: 'font-size:14px;color:#10233d;font-weight:500;line-height:1.4;'
+    };
+  }
+}
+</script>
+</body>
+</html>
